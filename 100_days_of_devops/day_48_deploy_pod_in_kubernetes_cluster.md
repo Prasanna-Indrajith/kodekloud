@@ -18,8 +18,7 @@ kind: Pod
 metadata:
   name: pod-httpd
   labels:
-    app: httpd_app
-container:
+    app: httpd_app container:
   - name: httpd-container
     image: httpd:latest
 ```
