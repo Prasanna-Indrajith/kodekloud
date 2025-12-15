@@ -13,6 +13,7 @@ Note: Validation will run the playbook using the command ansible-playbook -i inv
 ## Answer
 
 `cd` into Ansible folder and change the inventory file's details to match with app server 03. Create **playbook.yml** file.
+
 ```bash
 cd Ansible
 
@@ -21,7 +22,7 @@ vi inventory
     - save and exit
 
 vi playbook.yml
-    ---
+---
 - name: Create empty file on App Server 3
   hosts: stapp03
   tasks:
@@ -32,6 +33,7 @@ vi playbook.yml
 ```
 
 Secure ssh connection setup for passwordless login and automate.
+
 ```bash
 ssh-keygen -t rsa
 
@@ -39,6 +41,7 @@ ssh-copy-id -i .ssh/id_rsa.pub banner@stapp03
 ```
 
 Now run the ansible playbook
+
 ```bash
 ansible-playbook -i inventory playbook.yml
 ```
