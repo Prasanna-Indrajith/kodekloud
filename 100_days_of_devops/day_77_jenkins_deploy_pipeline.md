@@ -46,12 +46,12 @@ LB server is already configured. You should be able to see the latest changes yo
 
 4.  **Change the jenkin default URL**
 
-    - `Desktop` > `Manage Jenkins` > `System`
+    - `Dashboard` > `Manage Jenkins` > `System`
     - Jenkin URL : http://jenkins:8080
 
 5.  **Create the slave node**
 
-    - `Desktop` > `Manage Jenkins` > `Nodes`
+    - `Dashboard` > `Manage Jenkins` > `Nodes`
       - Name : Storage Server
       - Labels : ststor01
       - Remote root directory : /var/www/html
@@ -84,4 +84,5 @@ LB server is already configured. You should be able to see the latest changes yo
 
 ## Additional Details
 
-Lot to learn https://www.youtube.com/watch?v=Sdzh0AewCZg
+There is lot know learn - https://www.youtube.com/watch?v=Sdzh0AewCZg
+IDK the creator. But Thank you!
