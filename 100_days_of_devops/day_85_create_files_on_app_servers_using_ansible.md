@@ -33,13 +33,13 @@ d. Ensure the `user/group owner` of the `/tmp/code.txt` file is `tony` on app se
    ```yaml
     ---
     - name: Create /tmp/code.txt and set ownership
-    hosts: appservers
-    gather_facts: no
-    become: yes
+      hosts: appservers
+      gather_facts: no
+      become: yes
 
-    tasks:
+      tasks:
         - name: Create /tmp/code.txt and set ownership
-        ansible.builtin.file:
+          ansible.builtin.file:
             path: /tmp/code.txt
             state: touch
             owner: "{{ file_owner }}"

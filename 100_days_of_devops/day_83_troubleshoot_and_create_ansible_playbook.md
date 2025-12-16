@@ -31,12 +31,13 @@ Note: Validation will run the playbook using the command `ansible-playbook -i in
    ```yaml
    ---
    - name: Create empty file on App Server 2
-   hosts: stapp02
-   tasks:
-       - name: Create /tmp/file.txt
+     hosts: stapp02
+     tasks:
+     
+     - name: Create /tmp/file.txt
        file:
-           path: /tmp/file.txt
-           state: touch
+         path: /tmp/file.txt
+         state: touch
    ```
 
 3. **Setup passwordless play**

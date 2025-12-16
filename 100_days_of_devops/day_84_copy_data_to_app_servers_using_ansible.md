@@ -29,18 +29,18 @@ b. Create a playbook `/home/thor/ansible/playbook.yml` on the jump host to copy 
    ```yaml
     ---
     - name: Copy security index.html file to all app servers
-    hosts: appservers
-    gather_facts: no
+      hosts: appservers
+      gather_facts: no
 
-    tasks:
+      tasks:
         - name: Copy index.html from jump host to app servers
-        ansible.builtin.copy:
+          ansible.builtin.copy:
             src: /usr/src/security/index.html
             dest: /opt/security/index.html
             owner: root
             group: root
             mode: '0644'
-        become: yes
+          become: yes
    ```
 
 3. **Setup passwordless play**
